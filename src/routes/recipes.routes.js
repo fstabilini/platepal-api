@@ -11,7 +11,8 @@ const {
 
 recipesRouter.get("/categories", getCategories);
 recipesRouter.get("/categories/:category", getRecipesByCategory);
-recipesRouter.get("/favorites", getMyRecipes);
+recipesRouter.get("/favorites", getMyRecipes); // To see saved recipes
+// axios.get("http://localhost:8080/recipes/favorites")
 
 recipesRouter.post("/", createRecipe);
 

@@ -1,1 +1,46 @@
-{"myRecipes":[{"idMeal":"1b096b17-3261-4764-9e9d-f0c5920f5667","strMeal":"Pasta a la chichi","strCategory":"ChichiFood","strInstructions":"Nuevas instrucciones","strMealThumb":"http://urlRandom","strYoutube":"http://youtube.com/chichi","strIngredient1":"Ing1","strIngredient2":"Ing2","strMeasure1":"meas1","strMeasure2":"meas2"}]}
+{
+  "myRecipes": [
+    {
+      "idMeal": "72747f72-c561-496e-afc6-e00ee6546dc9",
+      "strMeal": "spaguetii",
+      "strCategory": "pasta",
+      "strInstructions": "mix everything",
+      "strMealThumb": "https://www.recetasnestlecam.com/sites/default/files/2023-03/comida-india-variada.jpg_7.jpg",
+      "strYoutube": "https://www.youtube.com/watch?v=__cpOZfejm4&t=13s",
+      "strIngredient1": "flour",
+      "strIngredient2": "water",
+      "strIngredient3": "salt",
+      "strMeasure1": "100 gr",
+      "strMeasure2": "2 cups",
+      "strMeasure3": "2 sp"
+    },
+    {
+      "idMeal": "ee4fea3f-c203-4542-97f8-de51e066a582",
+      "strMeal": "fideos",
+      "strCategory": "pasta",
+      "strInstructions": "boil, bla bla bla",
+      "strMealThumb": "",
+      "strYoutube": "",
+      "strIngredient1": "fideos",
+      "strIngredient2": "tuco",
+      "strIngredient3": "parmesano",
+      "strMeasure1": "1 paquete",
+      "strMeasure2": "1 frasco",
+      "strMeasure3": ""
+    },
+    {
+      "idMeal": "c3d52393-56b2-4534-b929-42c1a72f476b",
+      "strMeal": "jrjjrj",
+      "strCategory": "Veggie",
+      "strInstructions": "jkijij",
+      "strMealThumb": "https://www.recetasnestlecam.com/sites/default/files/2023-03/comida-india-variada.jpg_7.jpg",
+      "strYoutube": "https://www.youtube.com/watch?v=__cpOZfejm4&t=13s",
+      "strIngredient1": "jhjjh",
+      "strIngredient2": "jjhh",
+      "strIngredient3": "iiiuiu",
+      "strMeasure1": "",
+      "strMeasure2": "",
+      "strMeasure3": ""
+    }
+  ]
+}

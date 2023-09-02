@@ -1,9 +1,10 @@
 require("dotenv").config();
 const fs = require("fs");
 const path = require("path");
-
 const axios = require("axios");
 const { v4: uuidv4 } = require("uuid");
+
+// Falta poner validacion de errores
 
 const baseUrl = process.env.BASE_URL;
 
@@ -30,11 +31,26 @@ const getRecipesByCategory = async (req, res) => {
 const getRecipeById = async (req, res) => {
   const id = req.params.id;
 
-  const response = await axios.get(`${baseUrl}/lookup.php?i=${id}`);
+  try {
+    const response = await axios.get(`${baseUrl}/lookup.php?i=${id}`);
+    if (response.data && response.data.meals) {
+      return res.status(200).json(response.data);
+    }
+  } catch (error) {
+    console.error("Error fetching from the API", error);
+  }
 
-  const recipe = response.data;
+  const filePath = path.join(__dirname, "../data/recipes.json");
+  const data = fs.readFileSync(filePath, "utf8");
+  const jsonData = JSON.parse(data);
 
-  res.status(200).json(recipe);
+  const localRecipe = jsonData.myRecipes.find((recipe) => recipe.idMeal === id);
+
+  if (localRecipe) {
+    return res.status(200).json(localRecipe);
+  }
+
+  res.status(404).json({ message: "Recipe not found." });
 };
 
 const getMyRecipes = (req, res) => {

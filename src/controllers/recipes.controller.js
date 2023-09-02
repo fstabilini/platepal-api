@@ -2,7 +2,6 @@ require("dotenv").config();
 const fs = require("fs");
 const path = require("path");
 const axios = require("axios");
-const { v4: uuidv4 } = require("uuid");
 
 // Falta poner validacion de errores
 
@@ -63,6 +62,7 @@ const getMyRecipes = (req, res) => {
 
 const createRecipe = async (req, res) => {
   const {
+    idMeal,
     strMeal,
     strCategory,
     strInstructions,
@@ -72,10 +72,8 @@ const createRecipe = async (req, res) => {
     strMeasures,
   } = req.body;
 
-  const newId = uuidv4();
-
   const newRecipe = {
-    idMeal: newId,
+    idMeal,
     strMeal,
     strCategory,
     strInstructions,

@@ -3,8 +3,6 @@ const fs = require("fs");
 const path = require("path");
 const axios = require("axios");
 
-// Falta poner validacion de errores
-
 const baseUrl = process.env.BASE_URL;
 
 const getCategories = async (req, res) => {
@@ -77,8 +75,8 @@ const createRecipe = async (req, res) => {
     strMeal,
     strCategory,
     strInstructions,
-    strMealThumb, // Hay que agregar una imagen por defecto
-    strYoutube, // hay que agregar un video por defecto
+    strMealThumb,
+    strYoutube,
   };
 
   strIngredients.forEach((ingredient, index) => {
